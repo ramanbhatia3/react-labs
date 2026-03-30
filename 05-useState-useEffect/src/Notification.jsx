@@ -6,18 +6,26 @@ function Notification() {
     function increaseCount(){
     //   setCount(count + 1);
 
-    // setCount(prevCount => prevCount + 1)
+    setCount(prevCount => prevCount + 1)
 
-    setCount(function(currentValue){
-        return currentValue + 1
-    })
+    // setCount(function(currentValue){
+    //     return currentValue + 1
+    // })
     }
 
     // setInterval(increaseCount, 1000);
 
     useEffect(function(){
         setInterval(increaseCount, 1000)
-    },[])
+    },[]) // this effect will run on mount, because the array is empty.
+
+    // useEffect(function(){
+    //     setInterval(increaseCount, 1000)
+    // },[count])
+
+    useEffect(function(){
+        console.log("the count has been updated to " + count)
+    },[count]) 
 
     
   return (
