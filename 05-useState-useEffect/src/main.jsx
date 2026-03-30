@@ -11,6 +11,9 @@ import LinkedInApp from './LinkedInApp.jsx'
 
 import TodoApp from './TodoApp.jsx'
 
+import Timer from './Timer.jsx'
+import App from './Timer.jsx'
+
 createRoot(document.getElementById('root')).render(
-    <TodoApp />
+    <App />
 )
