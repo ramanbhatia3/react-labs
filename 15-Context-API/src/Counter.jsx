@@ -38,10 +38,10 @@ function Value(){
     return <p>Count: {count}</p>
 }
 
-const Count = () => {
+const Counter = () => {
     return <div>
         <Parent />
     </div>
 }
 
-export default Count;
+export default Counter;
