@@ -33,6 +33,10 @@ export function useFetch(url){
     useEffect(() => {
       getDetails()
     }, [url])
+
+    useEffect(() => {
+        setInterval(getDetails, 10 * 1000);  // cleanup
+    })
     
     return {
         finalData,
